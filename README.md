@@ -1,14 +1,14 @@
 # jQuery Tags
 
 * Site: [jQuery Tags](http://aquilez.github.com/jQuery-Tags/)
-* License: [MIT](http://www.opensource.org/licenses/mit-license.php)
 * Author: [Santiago Dimattía](http://about.me/santiagodimattia)
+* License: [MIT](http://www.opensource.org/licenses/mit-license.php)
 
 ## Description
 
 A cool way to make tag management easier. You write the tag on a text field, and when you
-hit enter (or deselect the inpit) it adds the tag in list. You can delete any tag from
-the list just by clicking on the little "x" next to the tag value.
+hit enter (or deselect the input) it adds the tag to a list above the text field. You can
+delete any tag from the list just by clicking on the little "x" next to the tag name.
 
 ## Screenshot
 
@@ -22,8 +22,8 @@ First you need to include [jQuery](http://jquery.com) and the plugin:
 
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.tags.js"></script>
-	
-Then, you need to include the CSS file (The plugin will work without it, but it won't look pretty)
+
+Then, you need to include the default CSS file (The plugin will work without it, but it won't look pretty)
 
 	<link rel="stylesheet" media="screen" href="jquery.tags.css">
 
@@ -48,3 +48,13 @@ Callback executed after a tag has been added. The function receives two paramete
 ### tagRemoved
 
 Callback executed after a tag has been removed. It accepts the same parameters as *tagAdded*.
+
+#### Example:
+
+	jQuery(document).ready(function($){
+		$('input.tags').tags({
+			separator: '|',
+			tagAdded: function(tag) { console.log(tag); },
+			tagRemoved: function(tag) { console.log(tag); }
+		});
+	});
