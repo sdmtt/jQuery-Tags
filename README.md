@@ -1,5 +1,6 @@
 # jQuery Tags
 
+* Site: [jQuery Tags](http://aquilez.github.com/jQuery-Tags/)
 * License: [MIT](http://www.opensource.org/licenses/mit-license.php)
 * Author: [Santiago Dimattía](http://about.me/santiagodimattia)
 
@@ -12,6 +13,8 @@ the list just by clicking on the little "x" next to the tag value.
 ## Screenshot
 
 ![Screenshot](http://i56.tinypic.com/vfidmp.png)
+
+You can access a live demo [here](http://aquilez.github.com/jQuery-Tags/).
 
 ## Usage
 
@@ -40,8 +43,8 @@ String to use to separate the tags and concatenate the string. The default is a 
 
 ### tagAdded
 
-Callback which is executed after a tag has been added. The function receives two parameters: the tag name, and a jQuery object (the text field)
+Callback executed after a tag has been added. The function receives two parameters: the tag name, and a jQuery object (the text field).
 
 ### tagRemoved
 
-Callback which is executed after a tag has been removed. It accepts the same parameters as *tagAdded*
+Callback executed after a tag has been removed. It accepts the same parameters as *tagAdded*.
