@@ -1,0 +1,50 @@
+/***********************************************/
+/*   I recommend using Eric Meyers CSS Reset   */
+/*  http://meyerweb.com/eric/tools/css/reset/  */
+/***********************************************/
+
+.tag-manager ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+/* ========== STYLE ========== */
+
+.tag-manager {
+	border: 1px solid #ccc;
+	padding: 5px;
+	width: 100%;
+	margin: 5px 0 20px 0;
+}
+
+.tag-manager input {
+	border: 0;
+	clear: both;
+	display: block;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+.tag-list li {
+	float: left;
+	margin: 0 5px 5px 0;
+	background: #c7da76;
+	border: 1px solid #b7c963;
+	padding: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: text;
+}
+
+.tag-list .tag-remove-link {
+	cursor: pointer;
+	font-size: 10px;
+	padding: 5px;
+}
+
+.tag-list .tag-remove-link:hover {
+	color: red;
+}
