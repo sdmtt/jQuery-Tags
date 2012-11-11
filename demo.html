@@ -26,9 +26,18 @@
 			font-size: 32px;
 			font-weight: normal;
 		}
+
+		label {
+			display: block;
+		}
+
+		label + input {
+			margin-bottom: 30px;
+			width: 100%;
+		}
 	</style>
 
-	<!-- Call the plugin on the text field -->
+	<!-- Call the plugin on the text fields -->
 	<script>
 		jQuery(document).ready(function($){
 			$('input.tags').tags({
@@ -37,6 +46,9 @@
 				tagAdded:    function(tag) { console.log('Tag added:'+tag); },
 				tagRemoved:  function(tag) { console.log('Tag removed:'+tag); }
 			});
+
+			/* Hide the little text we put for users with no javascript enabled */
+			$('.tag-help').hide();
 		});
 	</script>
 
@@ -46,11 +58,13 @@
 	<div>
 		<h1>jQuery Tags Demo</h1>
 
-		<label for="demo-1">Input with default tags</label>
+		<label for="demo-1">Input with default tags:</label>
 		<input class="tags" type="text" id="demo-1" name="demo-1" value="MyBB|WordPress|Hello World">
 
-		<label for="demo-2">Input without default tags</label>
+		<label for="demo-2">Input without default tags:</label>
 		<input class="tags" type="text" id="demo-2" name="demo-2">
+
+		<span class="tag-help">Separe your tags with a vertical bar.</span>
 	</div>
 </body>
 </html>
