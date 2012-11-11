@@ -13,8 +13,9 @@
 	{
 		var defaults = {
 			separator:   ',',
+			maxTagWords: 0,
 			tagAdded:    function() { },
-			tagRemoved:  function() { }
+			tagRemoved:  function() { },
 		};
 		var settings = $.extend(defaults, options);
 
@@ -90,6 +91,16 @@
 						// Trim
 						tag = tags[i].replace(/^\s+|\s+$/g, '');
 
+						// Apply maxTagWords
+						var words = tag.split(" ");
+						if(settings.maxTagWords != 0 && words.length > settings.maxTagWords)
+						{
+							for(var m = 0; m < words.length - settings.maxTagWords; m++)
+							{
+								tag = tag.substring(0, tag.lastIndexOf(" "));
+							}
+						}
+
 						// Add the tag only if it isn't on the list already
 						if(that.taglist[tag.toLowerCase()] === undefined)
 						{
@@ -100,7 +111,7 @@
 							that.taglist[tag.toLowerCase()] = tag;
 
 							// Delete the tag when the link is clicked!
-							e.parent().find('li[data-name=' + tag + '] a').unbind().click(function(){
+							e.parent().find('li[data-name="' + tag + '"] a').unbind().click(function(){
 								tagname = $(this).parent().data('name').toString().toLowerCase();
 
 								// Delete the key

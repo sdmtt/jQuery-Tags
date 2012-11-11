@@ -41,6 +41,10 @@ You have 3 options (2 of them are callbacks, actually):
 
 String to use to separate the tags and concatenate the string. The default is a comma.
 
+### maxTagWords
+
+Limit the number of words a tag can have. Trims the tag if necessary. Set to 0 for no limit (default).
+
 ### tagAdded
 
 Callback executed after a tag has been added. The function receives two parameters: the tag name, and a jQuery object (the text field).
@@ -53,8 +57,9 @@ Callback executed after a tag has been removed. It accepts the same parameters a
 
 	jQuery(document).ready(function($){
 		$('input.tags').tags({
-			separator: '|',
-			tagAdded: function(tag) { console.log(tag); },
-			tagRemoved: function(tag) { console.log(tag); }
+			separator:   '|',
+			maxTagWords: 0,
+			tagAdded:    function(tag) { console.log('Tag added:'+tag); },
+			tagRemoved:  function(tag) { console.log('Tag removed:'+tag); }
 		});
 	});
