@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>TagManager for jQuery</title>
+	<title>Tag Manager for jQuery</title>
 	<link rel="stylesheet" href="assets/css/reset.css" media="screen">
 	<link rel="stylesheet" href="assets/css/style.css" media="screen">
 	<link rel="stylesheet" href="assets/css/tags.css" media="screen">
@@ -13,11 +13,12 @@
 <body>
 
 	<div id="header">
-		<h1>jQuery Tags</h1>
-		
+		<h1>jQuery Tags v1.1</h1>
+
 		<nav>
 			<ul>
 				<li>&laquo; <a href="http://github.com/aquilez/jQuery-Tags">GitHub</a> &raquo;</li>
+				<li>&laquo; <a href="https://github.com/aquilez/jQuery-Tags/archive/v1.1.zip">Download</a> &raquo;</li>
 				<li>&laquo; <a href="http://about.me/santiagodimattia">Author</a> &raquo;</li>
 			</ul>
 		</nav>
@@ -25,12 +26,18 @@
 
 	<div id="content">
 		<label for="tags">Demo #1 - With default tags</label>
-		<input type="text" name="tags" id="tags" class="tag-input" value="mybb, wordpress, web development" />
+		<input type="text" name="tags" id="tags" class="tag-input" value="mybb,wordpress,web development" />
 
 		<label for="tags-2">Demo #2 - Without default tags</label>
 		<input type="text" name="tags-2" id="tags-2" class="tag-input" value="" />
 
-		<span class="tags-help">Separe tags with comma</span>
+		<label for="tags-3">Demo #3 - With word limit (2)</label>
+		<input type="text" name="tags-3" id="tags-3" class="tag-input-3" value="" />
+
+		<label for="tags-4">Demo #4 - Using custom separator (|)</label>
+		<input type="text" name="tags-4" id="tags-4" class="tag-input-4" value="" />
+
+		<span class="tags-help">Separe the tags with a comma.</span>
 	</div><!-- #content -->
 
 	<div id="footer">

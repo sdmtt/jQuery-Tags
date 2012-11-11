@@ -40,7 +40,7 @@ nav li {
 	margin-left: 10px;
 }
 
-nav li:last-child {
+nav li:first-child {
 	margin: 0;
 }
 
