@@ -1,5 +1,5 @@
 /*!
- * jQuery Tags plugin v1.0
+ * jQuery Tags plugin v1.1
  * http://github.com/aquilez/jquery-tags
  *
  * Copyright 2011, Santiago Dimattia

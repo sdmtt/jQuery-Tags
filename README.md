@@ -35,7 +35,7 @@ And then call the plugin on a text field
 
 ## Options
 
-You have 3 options (2 of them are callbacks, actually):
+You have 4 options (2 of them are callbacks, actually):
 
 ### separator
 
