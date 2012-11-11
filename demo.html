@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery Tags Demo</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="jquery.tags.js"></script>
+
+	<!-- Required style for the tag field to look decent -->
+	<link href="style.css" rel="stylesheet" />
+
+	<!-- Other style to make this demo look decent -->
+	<style>
+		body {
+			font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+			font-size: 12px;
+		}
+
+		div {
+			width: 300px;
+			margin: 20px auto;
+		}
+
+		h1 {
+			font-size: 32px;
+			font-weight: normal;
+		}
+	</style>
+
+	<!-- Call the plugin on the text field -->
+	<script>
+		jQuery(document).ready(function($){
+			$('input.tags').tags({
+				separator:   '|',
+				maxTagWords: 0,
+				tagAdded:    function(tag) { console.log('Tag added:'+tag); },
+				tagRemoved:  function(tag) { console.log('Tag removed:'+tag); }
+			});
+		});
+	</script>
+
+
+</head>
+<body>
+	<div>
+		<h1>jQuery Tags Demo</h1>
+
+		<label for="demo-1">Input with default tags</label>
+		<input class="tags" type="text" id="demo-1" value="MyBB|WordPress|Hello World">
+
+		<label for="demo-2">Input without default tags</label>
+		<input class="tags" type="text" id="demo-2">
+	</div>
+</body>
+</html>
+
